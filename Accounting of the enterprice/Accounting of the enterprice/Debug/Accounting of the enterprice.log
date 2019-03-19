@@ -1,2 +1,6 @@
 ﻿  Source.cpp
-  Accounting of the enterprice.vcxproj -> D:\Step Git\My-coursework\Accounting of the enterprice\Debug\Accounting of the enterprice.exe
+d:\step git\my-coursework\accounting of the enterprice\accounting of the enterprice\source.cpp(5): error C2065: 'string': undeclared identifier
+d:\step git\my-coursework\accounting of the enterprice\accounting of the enterprice\source.cpp(5): error C2146: syntax error: missing ')' before identifier 'login'
+d:\step git\my-coursework\accounting of the enterprice\accounting of the enterprice\source.cpp(5): error C2143: syntax error: missing ';' before '{'
+d:\step git\my-coursework\accounting of the enterprice\accounting of the enterprice\source.cpp(5): error C2447: '{': missing function header (old-style formal list?)
+d:\step git\my-coursework\accounting of the enterprice\accounting of the enterprice\source.cpp(36): error C3861: 'LogIn': identifier not found
