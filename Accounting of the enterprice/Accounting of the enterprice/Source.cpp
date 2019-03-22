@@ -2,38 +2,54 @@
 #include<Windows.h>
 #include<string>
 
-void LogIn(string login, string passwrd, string log1, string passwrd1) {
+using namespace std;
 
-	for (int i = 0; i < 3; i++)
-	{
-		cout << "\n\tAttempt to login number [ " << i + 1 << " ] " << "\n\tEnter your login: ";
-		cin >> login;
-		if (login == log1) {
-			cout << "\n\tLogin is correct! Enter the password pleas: ";
-		}
-		cin >> passwrd;
-		if (passwrd == passwrd1) {
-			cout << "\n\tPassrword is correct!\n\tLogining is successful!";
-		}
-		else cout << "\n\tLoginin failed! Maybe login or password is wrong!" << endl;
+void LogIn(char login[], char passwd[], char login1[], char passwd1[]) 
+{
+	cout << "\n\tTo enter the program, please, enter info below." << endl;
+	cout << "\n\tEnter your login: ";
+	cin >> login1;
+	cout << "\n\tEnter your password: ";
+	cin >> passwd1;
+
+	if (login1 == login && passwd1 == passwd) {
+
+		cout << "\n\tAccess is alowed.";
 	}
-
+	else
+	{
+		cout << "\n\tAccess denied." << endl;
+	}
 }
 
-using namespace std;
+void Menu() 
+{
+	cout << "\n\t\t\t\t\t\tAccout of the enterprise (0.1)." << endl;
+	cout << "\n\t===============================================================================" << endl;
+	cout << "\n\tTo fill information about employee, please PRESS 1. " << endl;
+	cout << "\n\tTo add new employee, please PRESS 2. " << endl;
+	cout << "\n\tTo delete an employee and info about him, please PRESS 3. " << endl;
+	cout << "\n\tTo see information about all employees, please PRESS 4. " << endl;
+	cout << "\n\tTo see information about direct employee, please PRESS 5. " << endl;
+	cout << "\n\tTo exit, please PRESS 0. " << endl << endl;
+}
 
 int main() {
 
-	string login = "Admin";
-	string passwrd = "Admin123";
-	string log1;
-	string passwrd1;
+	char login[] = "qwerty";
+	char passwd[] = "qwerty";
 
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading..." << endl;
+	char login1[7];
+	char passwd1[7];
+
+	cout << endl;
+	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tWe preapering all to start, please wait a moment..." << endl;
+	cout << "\n\t\t\t\t\t\tLoading..." << endl;
 	Sleep(1000);
 	system("cls");
 
-	LogIn(login, passwrd, log1, passwrd1);
+	Menu();
+	//LogIn(login, passwd, login1, passwd1);
 
 	system("pause");
 	return 0;
