@@ -16,7 +16,7 @@ void Menu()
 	cout << "\n\tTo exit, please PRESS 0. " << endl << endl;
 }
 
-void LogIn(char login[], char passwd[], char login1[], char passwd1[]) 
+void LogIn(string login, string passwd, string login1, string passwd1)
 {
 	cout << "\n\tTo enter the program, please, enter info below." << endl;
 	cout << "\n\tEnter your login: ";
@@ -39,11 +39,11 @@ void LogIn(char login[], char passwd[], char login1[], char passwd1[])
 
 int main() {
 
-	char login[] = "qwerty";
-	char passwd[] = "qwerty";
+	string login = "qwerty";
+	string passwd = "qwerty";
 
-	char login1[255];
-	char passwd1[255];
+	string login1;
+	string passwd1;
 
 	cout << endl;
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tWe preapering all to start, please wait a moment..." << endl;
