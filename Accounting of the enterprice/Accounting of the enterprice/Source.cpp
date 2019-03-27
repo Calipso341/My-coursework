@@ -18,7 +18,7 @@ public:
 	};
 };
 
-void Menu()
+void Menu(Employee Bill)
 {
 	int choice = 0;
 	cout << "\n\t\t\t\t\t\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
@@ -31,7 +31,7 @@ void Menu()
 	}
 }
 
-void LogIn(string login, string passwd, string login1, string passwd1)
+void LogIn(string login, string passwd, string login1, string passwd1, Employee Bill)
 {
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tTo enter the program, please, enter info below." << endl;
 	cout << "\n\t\t\t\t\t\tEnter your login: ";
@@ -45,7 +45,7 @@ void LogIn(string login, string passwd, string login1, string passwd1)
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tAccess is alowed.";
 		Sleep(1000);
 		system("cls");
-		Menu();
+		Menu(Bill);
 	}
 	else
 	{
@@ -79,7 +79,7 @@ int main() {
 	Sleep(1000);
 	system("cls");
 
-	LogIn(login, passwd, login1, passwd1);
+	LogIn(login, passwd, login1, passwd1, Bill);
 
 	system("pause");
 	return 0;
