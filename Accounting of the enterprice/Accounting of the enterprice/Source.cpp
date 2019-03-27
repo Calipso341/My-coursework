@@ -14,7 +14,7 @@ public:
 	short int workDays;
 	short int weekends;
 	void ShowInfo() {
-		cout << "\n\tName: " << name << "\n\tSurname: " << surname << "\n\tAge: " << age << "\n\tDiscription: " << discription << "\n\tPost: " << post << "\n\tNumber of work days: " << workDays << "\n\tNumber of weekends: " << weekends << endl;
+		cout << "\n\n\tName: " << name << "\n\n\tSurname: " << surname << "\n\n\tAge: " << age << "\n\n\tDiscription: " << discription << "\n\n\tPost: " << post << "\n\n\tNumber of work days: " << workDays << "\n\n\tNumber of weekends: " << weekends << endl;
 	};
 };
 
@@ -25,8 +25,13 @@ void Menu(Employee Bill)
 	cout << "\n\t\t\t\t\t\t  Accounting of the enterprise (0.1)." << endl;
 	cout << "\n\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
 	cout << "\n\tTo fill information about employee, PRESS 1. " << "\n\n\tTo add new employee, PRESS 2. " << "\n\n\tTo delete an employee and info about him, PRESS 3. " << "\n\n\tTo see information about all employees, PRESS 4. " << "\n\n\tTo see information about direct employee, PRESS 5. " << "\n\n\tTo exit, PRESS 0. " << endl << endl;
+	cout << "\n\tYour choice:";
 	cin >> choice;
 	if (int choise = 4) {
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+		Sleep(1000);
+		system("cls");
 		Bill.ShowInfo();
 	}
 }
