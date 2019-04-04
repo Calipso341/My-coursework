@@ -1,0 +1,9 @@
+
+	
+	Name: Nikita
+	Surname: Tatarintsev
+	Age: 18
+	Discription: Hello
+	Post: seller
+	Namber of work days: 15
+	Number of weekends: 15

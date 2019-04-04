@@ -30,7 +30,7 @@ struct Info {
 	}
 };
 
-void FillInfo(Info) {
+void FillInfo() {
 
 	int Size = 0;
 
@@ -42,28 +42,33 @@ void FillInfo(Info) {
 
 	for (int i = 0; i < Size; i++)
 	{
-		cout << "\n\tEnter name of employee: " << endl;
+		cout << "\n\tEnter name of employee: ";
 		cin >> employee[i].name;
-		cout << "\n\tEnter surname of employee: " << endl;
+		cout << "\n\tEnter surname of employee: ";
 		cin >> employee[i].surname;
-		cout << "\n\tEnter age of employee: " << endl;
+		cout << "\n\tEnter age of employee: ";
 		cin >> employee[i].age;
-		cout << "\n\tEnter discription about employee: " << endl;
+		cout << "\n\tEnter discription about employee: ";
 		cin >> employee[i].discription;
-		cout << "\n\tEnter post of employee: " << endl;
+		cout << "\n\tEnter post of employee: ";
 		cin >> employee[i].post;
-		cout << "\n\tEnter number of work days of employee: " << endl;
+		cout << "\n\tEnter number of work days of employee: ";
 		cin >> employee[i].workDays;
-		cout << "\n\tEnter weekends of employee: " << endl;
+		cout << "\n\tEnter weekends of employee: ";
 		cin >> employee[i].weekends;
 	}
 	ofstream file;
 
 	file.open("I.E.txt", ofstream::app);
-	file.close();
+
+	for (int i = 0; i < Size; i++)
+	{
+		file << employee[i].SaveFile();
+		file.close();
+	}
 }
 
-void Menu(Info)
+void Menu()
 {
 	int choice = 0;
 	cout << "\n\t\t\t\t\t\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
@@ -72,20 +77,20 @@ void Menu(Info)
 	cout << "\n\tTo fill information about employee, PRESS 1. " << "\n\n\tTo add new employee, PRESS 2. " << "\n\n\tTo delete an employee and info about him, PRESS 3. " << "\n\n\tTo see information about all employees, PRESS 4. " << "\n\n\tTo see information about direct employee, PRESS 5. " << "\n\n\tTo exit, PRESS 0. " << endl << endl;
 	cout << "\n\tYour choice:";
 	cin >> choice;
-	if (int choise = 4) {
+	if (int choice = 4) {
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
 		system("cls");
-		ShowInfo();
+		//Info.ShowInfo();
 	}
-	else if (int choice = 1) {
+	if (int choice = 1) {
 	
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
 		system("cls");
-		FillInfo(Info);
+		FillInfo();
 	 
 	}
 }
@@ -104,7 +109,7 @@ void LogIn(string login, string passwd, string login1, string passwd1)
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tAccess is alowed.";
 		Sleep(1000);
 		system("cls");
-		Menu(Bill);
+		Menu();
 	}
 	else
 	{
