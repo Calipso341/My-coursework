@@ -56,6 +56,7 @@ void FillInfo() {
 		cin >> employee[i].workDays;
 		cout << "\n\tEnter weekends of employee: ";
 		cin >> employee[i].weekends;
+		cout << "\n\t============================================" << endl;
 	}
 	ofstream file;
 
@@ -71,11 +72,11 @@ void FillInfo() {
 void Menu()
 {
 	int choice = 0;
-	cout << "\n\t\t\t\t\t\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
+	cout << "\n\t\t\t\t\t\t_______________________________________" << endl;
 	cout << "\n\t\t\t\t\t\t  Accounting of the enterprise (0.1)." << endl;
-	cout << "\n\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
+	cout << "\n\t________________________________________________________________________________________________________" << endl;
 	cout << "\n\tTo fill information about employee, PRESS 1. " << "\n\n\tTo add new employee, PRESS 2. " << "\n\n\tTo delete an employee and info about him, PRESS 3. " << "\n\n\tTo see information about all employees, PRESS 4. " << "\n\n\tTo see information about direct employee, PRESS 5. " << "\n\n\tTo exit, PRESS 0. " << endl << endl;
-	cout << "\n\tYour choice:";
+	cout << "\n\tYour choice: ";
 	cin >> choice;
 	if (int choice = 4) {
 		system("cls");

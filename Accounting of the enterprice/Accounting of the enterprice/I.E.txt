@@ -7,3 +7,19 @@
 	Post: seller
 	Namber of work days: 15
 	Number of weekends: 15
+	
+        Name: Sergij
+	Surname: Tatarintsev
+	Age: 43
+	Discription: Owner
+	Post: Owner
+	Namber of work days: 31
+	Number of weekends: 0
+	
+        Name: Bill
+	Surname: Gates
+	Age: 60
+	Discription: Some
+	Post: dude
+	Namber of work days: 15
+	Number of weekends: 15
