@@ -98,6 +98,7 @@ void Menu(Employee Bill)
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
+		system("cls");
 		FillInfo(Info);
 	 
 	}
@@ -152,7 +153,6 @@ int main() {
 	Sleep(1000);
 	system("cls");
 
-	int Size = 0;
 	LogIn(login, passwd, login1, passwd1, Bill);
 
 	system("pause");
