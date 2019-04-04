@@ -56,7 +56,7 @@ void FillInfo() {
 		cin >> employee[i].workDays;
 		cout << "\n\tEnter weekends of employee: ";
 		cin >> employee[i].weekends;
-		cout << "\n\t============================================" << endl;
+		cout << "\n\t============================================" << endl << endl;
 	}
 	ofstream file;
 
