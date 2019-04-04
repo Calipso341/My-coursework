@@ -63,21 +63,7 @@ void FillInfo(Info) {
 	file.close();
 }
 
-struct Employee {
-public:
-	string name;
-	string surname;
-	short int age;
-	string discription;
-	string post;
-	short int workDays;
-	short int weekends;
-	void ShowInfo() {
-		cout << "\n\n\tName: " << name << "\n\n\tSurname: " << surname << "\n\n\tAge: " << age << "\n\n\tDiscription: " << discription << "\n\n\tPost: " << post << "\n\n\tNumber of work days: " << workDays << "\n\n\tNumber of weekends: " << weekends << endl;
-	};
-};
-
-void Menu(Employee Bill)
+void Menu(Info)
 {
 	int choice = 0;
 	cout << "\n\t\t\t\t\t\t*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*" << endl;
@@ -91,7 +77,7 @@ void Menu(Employee Bill)
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
 		system("cls");
-		Bill.ShowInfo();
+		ShowInfo();
 	}
 	else if (int choice = 1) {
 	
@@ -104,7 +90,7 @@ void Menu(Employee Bill)
 	}
 }
 
-void LogIn(string login, string passwd, string login1, string passwd1, Employee Bill)
+void LogIn(string login, string passwd, string login1, string passwd1)
 {
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tTo enter the program, please, enter info below." << endl;
 	cout << "\n\t\t\t\t\t\tEnter your login: ";
@@ -127,9 +113,6 @@ void LogIn(string login, string passwd, string login1, string passwd1, Employee 
 	}
 }
 
-
-
-
 int main() {
 
 	string login = "qwerty";
@@ -138,22 +121,13 @@ int main() {
 	string login1;
 	string passwd1;
 
-	Employee Bill;
-	Bill.name = "John";
-	Bill.surname = "Mc.Gonahan";
-	Bill.age = 20;
-	Bill.discription = "Nice guy with some nice skils!";
-	Bill.post = "software developer";
-	Bill.workDays = 25;
-	Bill.weekends = 10;
-
 	cout << endl;
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tWe preapering everything to start, please wait a moment..." << endl;
 	cout << "\n\t\t\t\t\t\tLoading..." << endl;
 	Sleep(1000);
 	system("cls");
 
-	LogIn(login, passwd, login1, passwd1, Bill);
+	LogIn(login, passwd, login1, passwd1);
 
 	system("pause");
 	return 0;
