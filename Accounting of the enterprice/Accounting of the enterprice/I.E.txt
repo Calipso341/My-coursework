@@ -1,10 +1,52 @@
 
 	
 	
-	Name: Bill
-	Surname: Gates
-	Age: 59
-	Discription: Nice
-	Post: King
+	
+	
+	
+	
+	__________________________________________
+
+	Name: Nikita
+
+	Surname: Tatarintsev
+
+	Age: 18
+
+	Discription: Female
+
+	Post: seller
+
 	Namber of work days: 15
+
 	Number of weekends: 15
+	__________________________________________
+
+	Name: Sergij
+
+	Surname: Tatarintsev
+
+	Age: 43
+
+	Discription: Female
+
+	Post: owner
+
+	Namber of work days: 30
+
+	Number of weekends: 1
+	__________________________________________
+
+	Name: Bill
+
+	Surname: Gates
+
+	Age: 55
+
+	Discription: Female
+
+	Post: owner
+
+	Namber of work days: 30
+
+	Number of weekends: 30

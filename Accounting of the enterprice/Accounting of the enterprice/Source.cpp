@@ -24,7 +24,7 @@ struct Info {
 
 		string txt;
 
-		txt = "\n\tName: " + name + "\n\tSurname: " + surname + "\n\tAge: " + to_string(age) + "\n\tDiscription: " + discription + "\n\tPost: " + post + "\n\tNamber of work days: " + to_string(workDays) + "\n\tNumber of weekends: " + to_string(weekends);
+		txt = "\n\t__________________________________________\n\n\tName: " + name + "\n\n\tSurname: " + surname + "\n\n\tAge: " + to_string(age) + "\n\n\tDiscription: " + discription + "\n\n\tPost: " + post + "\n\n\tNamber of work days: " + to_string(workDays) + "\n\n\tNumber of weekends: " + to_string(weekends);
 
 		return txt;
 	}
@@ -42,6 +42,7 @@ void FillInfo() {
 
 	for (int i = 0; i < Size; i++)
 	{
+		cout << "\n\t__________________________________________" << endl;
 		cout << "\n\tEnter name of employee: ";
 		cin >> employee[i].name;
 		cout << "\n\tEnter surname of employee: ";
@@ -56,7 +57,6 @@ void FillInfo() {
 		cin >> employee[i].workDays;
 		cout << "\n\tEnter weekends of employee: ";
 		cin >> employee[i].weekends;
-		cout << "\n\t============================================" << endl << endl;
 	}
 	ofstream file;
 
@@ -81,8 +81,8 @@ void Menu()
 	if (int choice = 4) {
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-		Sleep(1000);
-		system("cls");
+		//Sleep(1000);
+		//system("cls");
 		//Info.ShowInfo();
 	}
 	if (int choice = 1) {
@@ -121,8 +121,8 @@ void LogIn(string login, string passwd, string login1, string passwd1)
 
 int main() {
 
-	string login = "qwerty";
-	string passwd = "qwerty";
+	string login = "1";
+	string passwd = "1";
 
 	string login1;
 	string passwd1;
