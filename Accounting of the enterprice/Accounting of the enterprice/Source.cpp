@@ -89,7 +89,7 @@ void Menu()
 {
 	int MenuChoise = 0;
 
-	cout << "\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo delete an employee and info about him, PRESS [2]. " << "\n\n\tTo see information about all employees, PRESS [3]. " << "\n\n\tTo see information about direct employee, PRESS [4]. " << "\n\n\tTo exit, PRESS [0]. " << "\n\n\tYour choise: ";
+	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo delete an employee and info about him, PRESS [2]. " << "\n\n\tTo see information about all employees, PRESS [3]. " << "\n\n\tTo see information about direct employee, PRESS [4]. " << "\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button, then PRESS [enter]. \n\n\tHooray, now you could move in menu!" << "\n\n\tYour choise: ";
 
 	cin >> MenuChoise;
 
@@ -98,7 +98,7 @@ void Menu()
 		system("cls");
 		FillInfo();
 		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tSaving info in file...";
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tSaving info in file...";
 		Sleep(1000);
 		system("cls");
 		Menu();
@@ -138,6 +138,14 @@ void Menu()
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tBye!";
 		Sleep(1000);
 		exit(0);
+	}
+	else
+	{
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tOpen your eyes and PRESS correct buttons!";
+		Sleep(3000);
+		system("cls");
+		Menu();
 	}
 }
 
