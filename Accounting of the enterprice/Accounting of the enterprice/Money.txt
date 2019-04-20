@@ -1,7 +1,3 @@
 
 
-	Profu: 1500
-
-	Sallary: 250
-
-	Lesion: 0
+	

@@ -36,7 +36,7 @@ void FillCash()
 		cin >> sallary;
 		cout << "\n\n\tEnter amount of lesion: ";
 		cin >> lesion;
-		Cash << "\n\n\tProfu: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
+		Cash << "\n\n\tProfit: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
 	    Cash.close();
 }
 
