@@ -7,22 +7,14 @@ using namespace std;
 
 struct WorkerInfo
 {
-	string name;
-	string surname;
-	string discription;
-	string post;
+	string name, surname, discription, post;
 	long long int phone;
-	int age;
-	int workdays;
-	int weekends;
+	int age, workdays, weekends;
 };
 
 void FillCash()
 {
-
-	int profit;
-	int sallary;
-	int lesion;
+	int day, month, year, profit, sallary, lesion;
 
 	string Money = "Money.txt";
 
@@ -30,13 +22,19 @@ void FillCash()
 
 	Cash.open(Money, ofstream::app);
 
+	    cout << "\n\n\tEnter day of month you want to fill info about: ";
+		cin >> day;
+		cout << "\n\n\tEnter month of year you want to fill info about: ";
+		cin >> month;
+		cout << "\n\n\tEnter year you want to fill info about: ";
+		cin >> year;
 		cout << "\n\n\tEnter amount of profit: ";
 		cin >> profit;
 		cout << "\n\n\tEnter amount of sallary: ";
 		cin >> sallary;
 		cout << "\n\n\tEnter amount of lesion: ";
 		cin >> lesion;
-		Cash << "\n\n\tProfit: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
+		Cash << "\n\n\t::::::::::::::::::::::::::::::::::::::" << "\n\n\tDate: " << day << "." << month << "." << year << "\n\n\tProfit: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
 	    Cash.close();
 }
 
@@ -76,7 +74,7 @@ void FillInfo()
 		cout << "\n\n\tEnter the number of weekends: ";
 		cin >> worker[i].weekends;
 		cout << "\n\n\t";
-		info << "\n\n\tName: " << worker[i].name << "\n\n\tSurname: " << worker[i].surname << "\n\n\tDiskription: " << worker[i].discription << "\n\n\tPost: " << worker[i].post << "\n\n\tPhone: " << worker[i].phone << "\n\n\tAge: " << worker[i].age << "\n\n\tWork days: " << worker[i].workdays << "\n\n\tWeekends: " << worker[i].weekends;
+		info << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tName: " << worker[i].name << "\n\n\tSurname: " << worker[i].surname << "\n\n\tDiskription: " << worker[i].discription << "\n\n\tPost: " << worker[i].post << "\n\n\tPhone: " << worker[i].phone << "\n\n\tAge: " << worker[i].age << "\n\n\tWork days: " << worker[i].workdays << "\n\n\tWeekends: " << worker[i].weekends;
 	}
 	info.close();
 }
