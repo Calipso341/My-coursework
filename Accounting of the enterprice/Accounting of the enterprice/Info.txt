@@ -1,17 +1,5 @@
 
 
-	Name: Nikita
+	
 
-	Surname: Tatarintsev
-
-	Diskription: Good
-
-	Post: seller
-
-	Phone: 732264929
-
-	Age: 18
-
-	Work days: 15
-
-	Weekends: 15
+	
