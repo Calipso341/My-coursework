@@ -269,8 +269,7 @@ int main()
 	string log = "master";
 	string passwd = "1";
 
-	string log1;
-	string passwd1;
+	string log1, passwd1;
 
 	Login(log, passwd, log1, passwd1);
 
