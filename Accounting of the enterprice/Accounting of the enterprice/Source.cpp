@@ -244,6 +244,7 @@ void Menu()
 
 void Login(string log, string passwd, string log1, string passwd1)
 {
+	cout << "\n\tLogin: master.\n\n\tPassword: 1.";
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tTo enter the program, please, enter information below." << endl;
 	cout << "\n\t\t\t\t\t\tEnter your login: ";
 	cin >> log1;
@@ -267,7 +268,7 @@ void Login(string log, string passwd, string log1, string passwd1)
 
 int main()
 {
-	string log = "1";
+	string log = "master";
 	string passwd = "1";
 
 	string log1;
