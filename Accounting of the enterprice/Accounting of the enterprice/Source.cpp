@@ -63,6 +63,7 @@ void FillInfo()
 		cout << "\n\n\tEnter tne surname: ";
 		cin >> worker[i].surname;
 		cout << "\n\n\tEnter the discription: ";
+		cin.ignore();
 		getline(cin,worker[i].discription);
 		cout << "\n\n\tEnter the post: ";
 		cin >> worker[i].post;
@@ -70,7 +71,7 @@ void FillInfo()
 		cin >> worker[i].phone;
 		cout << "\n\n\tEnter the age: ";
 		cin >> worker[i].age;
-		cout << "\n\n\tEnter the number of work daays: ";
+		cout << "\n\n\tEnter the number of work days: ";
 		cin >> worker[i].workdays;
 		cout << "\n\n\tEnter the number of weekends: ";
 		cin >> worker[i].weekends;
