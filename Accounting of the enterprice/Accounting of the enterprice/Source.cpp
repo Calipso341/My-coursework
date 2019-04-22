@@ -22,7 +22,6 @@ void FillCash()
 
 	Cash.open(Money, ofstream::app);
 
-<<<<<<< HEAD
 	cout << "\n\n\tEnter day of month you want to fill info about: ";
 	cin >> day;
 	cout << "\n\n\tEnter month of year you want to fill info about: ";
@@ -37,22 +36,6 @@ void FillCash()
 	cin >> lesion;
 	Cash << "\n\n\t::::::::::::::::::::::::::::::::::::::" << "\n\n\tDate: " << day << "." << month << "." << year << "\n\n\tProfit: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
 	Cash.close();
-=======
-	    cout << "\n\n\tEnter day of month you want to fill info about: ";
-		cin >> day;
-		cout << "\n\n\tEnter month of year you want to fill info about: ";
-		cin >> month;
-		cout << "\n\n\tEnter year you want to fill info about: ";
-		cin >> year;
-		cout << "\n\n\tEnter amount of profit: ";
-		cin >> profit;
-		cout << "\n\n\tEnter amount of sallary: ";
-		cin >> sallary;
-		cout << "\n\n\tEnter amount of lesion: ";
-		cin >> lesion;
-		Cash << "\n\n\t::::::::::::::::::::::::::::::::::::::" << "\n\n\tDate: " << day << "." << month << "." << year << "\n\n\tProfit: " << profit << "\n\n\tSallary: " << sallary << "\n\n\tLesion: " << lesion;
-	    Cash.close();
->>>>>>> 315d0737879e50374e787ed62468a502195376cd
 }
 
 void FillInfo()
@@ -79,11 +62,7 @@ void FillInfo()
 		cin >> worker[i].surname;
 		cout << "\n\n\tEnter the discription: ";
 		cin.ignore();
-<<<<<<< HEAD
 		getline(cin, worker[i].discription);
-=======
-		getline(cin,worker[i].discription);
->>>>>>> 315d0737879e50374e787ed62468a502195376cd
 		cout << "\n\n\tEnter the post: ";
 		cin >> worker[i].post;
 		cout << "\n\n\tEnter the phone number: ";
@@ -100,11 +79,7 @@ void FillInfo()
 	info.close();
 }
 
-<<<<<<< HEAD
 void GetMoneyInfo()
-=======
-void GetMoneyInfo() 
->>>>>>> 315d0737879e50374e787ed62468a502195376cd
 {
 	string Money = "Money.txt";
 
