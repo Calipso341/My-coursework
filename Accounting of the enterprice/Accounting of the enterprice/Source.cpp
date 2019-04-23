@@ -5,8 +5,9 @@
 
 using namespace std;
 
-struct WorkerInfo
+class WorkerInfo
 {
+public:
 	string name, surname, discription, post;
 	long long int phone;
 	int age, workdays, weekends;
@@ -40,13 +41,21 @@ void FillCash()
 
 void FillInfo()
 {
+	WorkerInfo worker;
+	worker.name;
+	worker.surname;
+	worker.discription;
+	worker.post;
+	worker.phone;
+	worker.age;
+	worker.workdays;
+	worker.weekends;
+
 	int Size = 0;
 
 	cout << "\n\n\tEneter number of workers: ";
 
 	cin >> Size;
-
-	WorkerInfo *worker = new WorkerInfo[Size];
 
 	string file = "Info.txt";
 
@@ -57,25 +66,25 @@ void FillInfo()
 	for (int i = 0; i < Size; i++)
 	{
 		cout << "\n\n\tEnter the name: ";
-		cin >> worker[i].name;
+		cin >> worker.name;
 		cout << "\n\n\tEnter tne surname: ";
-		cin >> worker[i].surname;
+		cin >> worker.surname;
 		cout << "\n\n\tEnter the discription: ";
 		cin.ignore();
-		getline(cin, worker[i].discription);
+		getline(cin, worker.discription);
 		cout << "\n\n\tEnter the post: ";
 		cin.ignore();
-		getline(cin, worker[i].post);
+		getline(cin, worker.post);
 		cout << "\n\n\tEnter the phone number: ";
-		cin >> worker[i].phone;
+		cin >> worker.phone;
 		cout << "\n\n\tEnter the age: ";
-		cin >> worker[i].age;
+		cin >> worker.age;
 		cout << "\n\n\tEnter the number of work days: ";
-		cin >> worker[i].workdays;
+		cin >> worker.workdays;
 		cout << "\n\n\tEnter the number of weekends: ";
-		cin >> worker[i].weekends;
+		cin >> worker.weekends;
 		cout << "\n\n\t";
-		info << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tName: " << worker[i].name << "\n\n\tSurname: " << worker[i].surname << "\n\n\tDiskription: " << worker[i].discription << "\n\n\tPost: " << worker[i].post << "\n\n\tPhone: " << worker[i].phone << "\n\n\tAge: " << worker[i].age << "\n\n\tWork days: " << worker[i].workdays << "\n\n\tWeekends: " << worker[i].weekends;
+		info << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tName: " << worker.name << "\n\n\tSurname: " << worker.surname << "\n\n\tDiskription: " << worker.discription << "\n\n\tPost: " << worker.post << "\n\n\tPhone: " << worker.phone << "\n\n\tAge: " << worker.age << "\n\n\tWork days: " << worker.workdays << "\n\n\tWeekends: " << worker.weekends;
 	}
 	info.close();
 }
