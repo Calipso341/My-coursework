@@ -1,7 +1,0 @@
-
-
-	Profit: 1500
-
-	Sallary: 400
-
-	Lesion: 0

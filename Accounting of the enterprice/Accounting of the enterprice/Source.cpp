@@ -73,9 +73,9 @@ void FillInfo()
 		cin.ignore();
 		getline(cin, worker.discription);
 		cout << "\n\n\tEnter the post: ";
-		cin.ignore();
+		//cin.ignore();
 		getline(cin, worker.post);
-		cout << "\n\n\tEnter the phone number: ";
+		cout << "\n\n\tEnter the phone number: (+380)";
 		cin >> worker.phone;
 		cout << "\n\n\tEnter the age: ";
 		cin >> worker.age;
@@ -84,12 +84,12 @@ void FillInfo()
 		cout << "\n\n\tEnter the number of weekends: ";
 		cin >> worker.weekends;
 		cout << "\n\n\t";
-		info << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tName: " << worker.name << "\n\n\tSurname: " << worker.surname << "\n\n\tDiskription: " << worker.discription << "\n\n\tPost: " << worker.post << "\n\n\tPhone: " << worker.phone << "\n\n\tAge: " << worker.age << "\n\n\tWork days: " << worker.workdays << "\n\n\tWeekends: " << worker.weekends;
+		info << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tName: " << worker.name << "\n\n\tSurname: " << worker.surname << "\n\n\tDiskription: " << worker.discription << "\n\n\tPost: " << worker.post << "\n\n\tPhone: " << "+" << 380 << worker.phone << "\n\n\tAge: " << worker.age << "\n\n\tWork days: " << worker.workdays << "\n\n\tWeekends: " << worker.weekends;
 	}
 	info.close();
 }
 
-/*void DirectWorker(WorkerInfo) 
+/*void DirectWorker(WorkerInfo)
 {
 	cout << "\n\tEnter name of worker you want to get info about: ";
 	cin >> name;
@@ -255,7 +255,7 @@ void Menu()
 		system("cls");
 		Menu();
 	}
-	else if(MenuChoise == 7)
+	else if (MenuChoise == 7)
 	{
 		system("cls");
 		cout << "\n\n\tYet not working, still in progress...";
