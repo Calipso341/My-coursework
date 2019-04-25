@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 	
@@ -20,3 +21,5 @@
 	Work days: 25
 
 	Weekends: 6
+=======
+>>>>>>> d680cddfd4eaadaab2d32b4238bcb6886a4962fc

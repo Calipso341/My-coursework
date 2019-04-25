@@ -89,12 +89,6 @@ void FillInfo()
 	info.close();
 }
 
-/*void DirectWorker(WorkerInfo)
-{
-	cout << "\n\tEnter name of worker you want to get info about: ";
-	cin >> name;
-}*/
-
 void GetMoneyInfo()
 {
 	string Money = "Money.txt";
@@ -150,11 +144,56 @@ void GetInfo()
 	}
 }
 
+void DeleteInfo()
+{
+	string Information = "Info.txt";
+
+	ofstream Info;
+
+	Info.open(Information);
+
+	if (!Info.is_open())
+	{
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tFile does not exit! Creat one before read it!";
+		Sleep(3000);
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+		Sleep(1000);
+		system("cls");
+	}
+	else if (Info.is_open())
+	{
+		int DeleteChoise = 0;
+
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t[1] - yes.\n\n\t\t\t\t\t\t[2] - no.";
+		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all emploees?\n\n\t\t\t\t\t\tYour choise: ";
+		cin >> DeleteChoise;
+		if (DeleteChoise == 1)
+		{
+			Info.open(Information);
+			Info << " ";
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+
+			Sleep(1000);
+		}
+		else if (DeleteChoise == 2)
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			Sleep(1000);
+		}
+	}
+}
+
 void Menu()
 {
 	int MenuChoise = 0;
 
-	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7] - (Yet not working, still in progress)." << "\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button, then PRESS [enter]. \n\n\tHooray, now you could use my program and move in menu!" << "\n\n\tYour choise: ";
+	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7]. " << "\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button, then PRESS [enter]. \n\n\tHooray, now you could use my program and move in menu!" << "\n\n\tYour choise: ";
 
 	cin >> MenuChoise;
 
@@ -183,11 +222,7 @@ void Menu()
 	}
 	else if (MenuChoise == 3)
 	{
-		system("cls");
-		cout << "\n\n\tYet not working, still in progress...";
-		Sleep(1000);
-		system("cls");
-		Menu();
+		
 	}
 	else if (MenuChoise == 4)
 	{
@@ -258,8 +293,10 @@ void Menu()
 	else if (MenuChoise == 7)
 	{
 		system("cls");
-		cout << "\n\n\tYet not working, still in progress...";
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
+		system("cls");
+		DeleteInfo();
 		system("cls");
 		Menu();
 	}
@@ -280,17 +317,34 @@ void Menu()
 	}
 }
 
-void Login(string log, string passwd, string log1, string passwd1)
+void Login()
 {
-	cout << "\n\tLogin: master.\n\n\tPassword: 1.";
+	string login;
+	string password;
+
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tTo enter the program, please, enter information below." << endl;
 	cout << "\n\t\t\t\t\t\tEnter your login: ";
-	cin >> log1;
+	cin >> login;
 	cout << "\n\t\t\t\t\t\tEnter your password: ";
-	cin >> passwd1;
+	cin >> password;
 
-	if (log1 == log && passwd1 == passwd) {
+	string Info = "Login.txt";
 
+	ifstream Login;
+
+	string buflog;
+	string bufpasswd;
+
+	Login.open(Info);
+
+	if (Login.is_open())
+	{
+		getline(Login, buflog);
+		getline(Login, bufpasswd);
+	}
+
+	if (password == bufpasswd, login == buflog)
+	{
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tAccess is alowed.";
 		Sleep(1000);
@@ -306,12 +360,7 @@ void Login(string log, string passwd, string log1, string passwd1)
 
 int main()
 {
-	string log = "master";
-	string passwd = "1";
-
-	string log1, passwd1;
-
-	Login(log, passwd, log1, passwd1);
+	Login();
 
 	system("pause");
 	return 0;
