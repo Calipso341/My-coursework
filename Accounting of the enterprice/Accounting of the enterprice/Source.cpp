@@ -89,12 +89,6 @@ void FillInfo()
 	info.close();
 }
 
-/*void DirectWorker(WorkerInfo)
-{
-	cout << "\n\tEnter name of worker you want to get info about: ";
-	cin >> name;
-}*/
-
 void GetMoneyInfo()
 {
 	string Money = "Money.txt";
@@ -280,24 +274,41 @@ void Menu()
 	}
 }
 
-void Login(string log, string passwd, string log1, string passwd1)
+void Login()
 {
-	cout << "\n\tLogin: master.\n\n\tPassword: 1.";
+	string login;
+	string password;
+
 	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tTo enter the program, please, enter information below." << endl;
 	cout << "\n\t\t\t\t\t\tEnter your login: ";
-	cin >> log1;
+	cin >> login;
 	cout << "\n\t\t\t\t\t\tEnter your password: ";
-	cin >> passwd1;
+	cin >> password;
 
-	if (log1 == log && passwd1 == passwd) {
+	string Info = "Login.txt";
 
+	ifstream Login;
+
+	string buflog;
+	string bufpasswd;
+
+	Login.open(Info);
+
+	if (Login.is_open())
+	{
+		getline(Login, buflog);
+		getline(Login, bufpasswd);
+	}
+
+	if (password == bufpasswd, login == buflog)
+	{
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tAccess is alowed.";
 		Sleep(1000);
 		system("cls");
 		Menu();
 	}
-	else
+	else 
 	{
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tBad password or login. Access denied." << endl << endl;
@@ -306,12 +317,7 @@ void Login(string log, string passwd, string log1, string passwd1)
 
 int main()
 {
-	string log = "master";
-	string passwd = "1";
-
-	string log1, passwd1;
-
-	Login(log, passwd, log1, passwd1);
+	Login();
 
 	system("pause");
 	return 0;
