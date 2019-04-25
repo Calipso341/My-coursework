@@ -144,6 +144,51 @@ void GetInfo()
 	}
 }
 
+void DeleteInfo()
+{
+	string Information = "Info.txt";
+
+	ofstream Info;
+
+	Info.open(Information);
+
+	if (!Info.is_open())
+	{
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tFile does not exit! Creat one before read it!";
+		Sleep(3000);
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+		Sleep(1000);
+		system("cls");
+	}
+	else if (Info.is_open())
+	{
+		int DeleteChoise = 0;
+
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+		system("cls");
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t[1] - yes.\n\n\t\t\t\t\t\t[2] - no.";
+		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all emploees?\n\n\t\t\t\t\t\tYour choise: ";
+		cin >> DeleteChoise;
+		if (DeleteChoise == 1)
+		{
+			Info.open(Information);
+			Info << " ";
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+
+			Sleep(1000);
+		}
+		else if (DeleteChoise == 2)
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			Sleep(1000);
+		}
+	}
+}
+
 void Menu()
 {
 	int MenuChoise = 0;
@@ -177,11 +222,7 @@ void Menu()
 	}
 	else if (MenuChoise == 3)
 	{
-		system("cls");
-		cout << "\n\n\tYet not working, still in progress...";
-		Sleep(1000);
-		system("cls");
-		Menu();
+		
 	}
 	else if (MenuChoise == 4)
 	{
@@ -252,8 +293,10 @@ void Menu()
 	else if (MenuChoise == 7)
 	{
 		system("cls");
-		cout << "\n\n\tYet not working, still in progress...";
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		Sleep(1000);
+		system("cls");
+		DeleteInfo();
 		system("cls");
 		Menu();
 	}
@@ -308,7 +351,7 @@ void Login()
 		system("cls");
 		Menu();
 	}
-	else 
+	else
 	{
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tBad password or login. Access denied." << endl << endl;
