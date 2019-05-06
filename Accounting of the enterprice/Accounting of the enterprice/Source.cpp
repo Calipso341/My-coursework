@@ -2,6 +2,7 @@
 #include<Windows.h>
 #include<string>
 #include<fstream>
+#include<conio.h>
 
 using namespace std;
 
@@ -73,7 +74,6 @@ void FillInfo()
 		cin.ignore();
 		getline(cin, worker.discription);
 		cout << "\n\n\tEnter the post: ";
-		//cin.ignore();
 		getline(cin, worker.post);
 		cout << "\n\n\tEnter the phone number: (+380)";
 		cin >> worker.phone;
@@ -163,28 +163,30 @@ void DeleteMoneyInfo()
 	}
 	else if (Money.is_open())
 	{
-		int DeleteChoise = 0;
-
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t[1] - yes.\n\n\t\t\t\t\t\t[2] - no.";
 		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all emploees?\n\n\t\t\t\t\t\tYour choise: ";
-		cin >> DeleteChoise;
-		if (DeleteChoise == 1)
+		
+		while (true) 
 		{
-			Money.open(Cash);
-			Money << " ";
-			system("cls");
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			int MoneyKey = _getch();
 
-			Sleep(1000);
-		}
-		else if (DeleteChoise == 2)
-		{
-			system("cls");
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-			Sleep(1000);
+			if (MoneyKey == 49)
+			{
+				Money.open(Cash);
+				Money << " ";
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+				Sleep(1000);
+			}
+			else if (MoneyKey == 50)
+			{
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+				Sleep(1000);
+			}
 		}
 	}
 }
@@ -208,167 +210,169 @@ void DeleteInfo()
 	}
 	else if (Info.is_open())
 	{
-		int DeleteChoise = 0;
-
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t[1] - yes.\n\n\t\t\t\t\t\t[2] - no.";
 		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all emploees?\n\n\t\t\t\t\t\tYour choise: ";
-		cin >> DeleteChoise;
-		if (DeleteChoise == 1)
+		while (true) 
 		{
-			Info.open(Information);
-			Info << " ";
-			system("cls");
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-
-			Sleep(1000);
-		}
-		else if (DeleteChoise == 2)
-		{
-			system("cls");
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-			Sleep(1000);
+			int DeleteKey = _getch();
+			if (DeleteKey == 49)
+			{
+				Info.open(Information);
+				Info << " ";
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+				Sleep(1000);
+			}
+			else if (DeleteKey == 50)
+			{
+				system("cls");
+				cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+				Sleep(1000);
+			}
 		}
 	}
 }
 
 void Menu()
 {
-	int MenuChoise = 0;
-
-	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7]. " << "\n\n\tTo delete all information about money, PRESS [8]." <<"\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button, then PRESS [enter]. \n\n\tHooray, now you could use my program and move in menu!" << "\n\n\tYour choise: ";
-
-	cin >> MenuChoise;
-
-	if (MenuChoise == 1)
+	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7]. " << "\n\n\tTo delete all information about money, PRESS [8]." <<"\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button.\n\n\tHooray, now you could use my program and move in menu!";
+	
+	while (true)
 	{
-		system("cls");
-		FillInfo();
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tSaving info in file...";
-		Sleep(1000);
-		system("cls");
-		Menu();
-	}
-	else if (MenuChoise == 2)
-	{
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-		Sleep(1000);
-		system("cls");
-		FillCash();
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tSaving info in file...";
-		Sleep(1000);
-		system("cls");
-		Menu();
-	}
-	else if (MenuChoise == 3)
-	{
-		
-	}
-	else if (MenuChoise == 4)
-	{
-		int Choise1 = 0;
+		int MenuKey = _getch();
 
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-		Sleep(1000);
-		system("cls");
-		GetInfo();
-		cout << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tTo move back to menu, PRESS [1]" << "\n\n\tYour choise: ";
-		cin >> Choise1;
-
-		if (Choise1 == 1)
+		if (MenuKey == 49)
+		{
+			system("cls");
+			FillInfo();
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tSaving info in file...";
+			Sleep(1000);
+			system("cls");
+			Menu();
+		}
+		else if (MenuKey == 50)
 		{
 			system("cls");
 			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 			Sleep(1000);
 			system("cls");
-			Menu();
-		}
-		else
-		{
+			FillCash();
 			system("cls");
-			cout << "\n\n\tWrong button, you will automatically move to the menu...";
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tSaving info in file...";
 			Sleep(1000);
 			system("cls");
 			Menu();
 		}
-	}
-	else if (MenuChoise == 5)
-	{
-		int Choise4 = 0;
+		else if (MenuKey == 51)
+		{
 
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-		Sleep(1000);
-		system("cls");
-		GetMoneyInfo();
-		cout << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tTo move back to menu, PRESS [1]" << "\n\n\tYour choise: ";
-		cin >> Choise4;
-
-		if (Choise4 == 1)
+		}
+		else if (MenuKey == 52)
 		{
 			system("cls");
 			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
 			Sleep(1000);
 			system("cls");
-			Menu();
+			GetInfo();
+			cout << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tTo move back to menu, PRESS [1]" << "\n\n\tYour choise: ";
+			while (true) {
+
+				int InfoKey = _getch();
+
+				if (InfoKey == 49)
+				{
+					system("cls");
+					cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+					Sleep(1000);
+					system("cls");
+					Menu();
+				}
+				else
+				{
+					system("cls");
+					cout << "\n\n\tWrong button, you will automatically move to the menu...";
+					Sleep(1000);
+					system("cls");
+					Menu();
+				}
+			}
 		}
-		else
+		else if (MenuKey == 53)
 		{
 			system("cls");
-			cout << "\n\n\tWrong button, you will automatically move to the menu...";
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			Sleep(1000);
+			system("cls");
+			GetMoneyInfo();
+			cout << "\n\n\t::::::::::::::::::::::::::::::::::::::\n\n\tTo move back to menu, PRESS [1]" << "\n\n\tYour choise: ";
+			while (true) 
+			{
+				int GetMoneyInfoKey = _getch();
+				if (GetMoneyInfoKey == 49)
+				{
+					system("cls");
+					cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+					Sleep(1000);
+					system("cls");
+					Menu();
+				}
+				else
+				{
+					system("cls");
+					cout << "\n\n\tWrong button, you will automatically move to the menu...";
+					Sleep(1000);
+					system("cls");
+					Menu();
+				}
+			}
+		}
+		else if (MenuKey == 54)
+		{
+			system("cls");
+			cout << "\n\n\tYet not working, still in progress...";
 			Sleep(1000);
 			system("cls");
 			Menu();
 		}
-	}
-	else if (MenuChoise == 6)
-	{
-		system("cls");
-		cout << "\n\n\tYet not working, still in progress...";
-		Sleep(1000);
-		system("cls");
-		Menu();
-	}
-	else if (MenuChoise == 7)
-	{
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-		Sleep(1000);
-		system("cls");
-		DeleteInfo();
-		system("cls");
-		Menu();
-	}
-	else if (MenuChoise == 8)
-	{
-	system("cls");
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
-	Sleep(1000);
-	system("cls");
-	DeleteMoneyInfo();
-	system("cls");
-	Menu();
-	}
-	else if (MenuChoise == 0)
-	{
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tBye!";
-		Sleep(1000);
-		exit(0);
-	}
-	else
-	{
-		system("cls");
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tOpen your eyes and PRESS correct buttons!";
-		Sleep(3000);
-		system("cls");
-		Menu();
+		else if (MenuKey == 55)
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			Sleep(1000);
+			system("cls");
+			DeleteInfo();
+			system("cls");
+			Menu();
+		}
+		else if (MenuKey == 56)
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tLoading...";
+			Sleep(1000);
+			system("cls");
+			DeleteMoneyInfo();
+			system("cls");
+			Menu();
+		}
+		else if (MenuKey == 48)
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tBye!";
+			Sleep(1000);
+			exit(0);
+		}
+		else
+		{
+			system("cls");
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tOpen your eyes and PRESS correct buttons!";
+			Sleep(3000);
+			system("cls");
+			Menu();
+		}
 	}
 }
 
