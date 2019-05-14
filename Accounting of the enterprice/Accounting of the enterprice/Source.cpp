@@ -3,6 +3,7 @@
 #include<string>
 #include<fstream>
 #include<conio.h>
+#include <locale>
 
 using namespace std;
 
@@ -176,9 +177,14 @@ void DeleteInfo()
 	Sleep(1000);
 }
 
+void SortAlphabet() 
+{
+	
+}
+
 void Menu()
 {
-	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7]. " << "\n\n\tTo delete all information about money, PRESS [8]." << "\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button.\n\n\tHooray, now you could use my program and move in menu!";
+	cout << "\n\t\t\t\t\t\tVersion 0.1.0\t\t\t\t\tCreated by Calipso341" << "\n\n\tTo fill information about new employee, PRESS [1]. " << "\n\n\tTo fill information about money, PRESS [2]." << "\n\n\tTo delete an employee and info about him, PRESS [3] - (Yet not working, still in progress). " << "\n\n\tTo see information about all employees, PRESS [4]. " << "\n\n\tTo see information about money, PRESS [5]. " << "\n\n\tTo see information about direct employee, PRESS [6] - (Yet not working, still in progress). " << "\n\n\tTo delete information about all emploees, PRESS [7]. " << "\n\n\tTo delete all information about money, PRESS [8]." << " \n\n\tTo see information sorted by alphabet, PRESS [9]" <<"\n\n\tTo exit, PRESS [0]. " << "\n\n\t\t\t\t\t\tManual\n\n\tWelcome to shortest manual ever!" << "\n\n\tFor moving in menu PRESS [desired] button.\n\n\tHooray, now you could use my program and move in menu!";
 
 	while (true)
 	{
@@ -333,6 +339,10 @@ void Menu()
 			Sleep(1000);
 			exit(0);
 		}
+		else if (MenuKey == 57)
+        {
+
+        }
 		else
 		{
 			system("cls");
@@ -370,7 +380,7 @@ void Login()
 		getline(Login, bufpasswd);
 	}
 
-	if (password == bufpasswd, login == buflog)
+	if (password == bufpasswd && login == buflog)
 	{
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tAccess is alowed.";
