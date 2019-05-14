@@ -309,7 +309,7 @@ void Menu()
 		Sleep(1000);
 		system("cls");
 		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t[1] - yes.\n\n\t\t\t\t\t\t[2] - no.";
-		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all money?\n\n\t\t\t\t\t\tYour choise: ";
+		cout << "\n\n\t\t\t\t\t\tAre you sure that you want to delete all information about all money?";
 
 		int DeleteKey = _getch();
 
@@ -336,7 +336,7 @@ void Menu()
 		else
 		{
 			system("cls");
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tOpen your eyes and PRESS correct buttons!";
+			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tWrong button, PRESS correct buttons!";
 			Sleep(3000);
 			system("cls");
 			Menu();
